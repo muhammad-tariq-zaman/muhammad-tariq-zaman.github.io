@@ -3,24 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <title>Muhammad Tariq Zaman — IT Support Executive</title>
 <meta name="description" content="Portfolio of Muhammad Tariq Zaman, IT Support Executive (CCNA, BSCS) — IT support, networks and Microsoft 365, based in Islamabad, open to remote and on-site roles.">
 <style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:0 auto;padding:24px;line-height:1.6;color:#1f2937}
-h1{font-size:2rem;margin-bottom:0}h2{border-bottom:2px solid #0f766e;padding-bottom:4px;margin-top:36px}
-a{color:#0f766e}.tag{display:inline-block;background:#e6f4f1;border-radius:999px;padding:2px 10px;margin:2px;font-size:.9rem}
-.card{border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin:12px 0}
-.small{color:#6b7280}
-.media{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:12px 0}
-.media img,.media video{width:100%;border-radius:10px;border:1px solid #e5e7eb}
-.media figcaption{font-size:.9rem;color:#6b7280}
+:root{
+  --bg:#070b16; --text:#ffffff; --muted:#cbd5e1; --faint:#94a3b8;
+  --teal:#2dd4bf; --teal-bright:#5eead4; --card:rgba(255,255,255,.045);
+  --line:rgba(255,255,255,.13);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  margin:0; padding:28px 24px 48px; line-height:1.65;
+  color:var(--text); background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+/* ---- Lightly moving background patterns (dark, subtle, low motion) ---- */
+.bg{position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; background:var(--bg)}
+.bg-grid{
+  position:absolute; inset:-120px;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size:52px 52px;
+  animation:gridPan 70s linear infinite;
+}
+.bg-dots{
+  position:absolute; inset:-80px; opacity:.55;
+  background-image:radial-gradient(rgba(45,212,191,.22) 1.2px, transparent 1.3px);
+  background-size:30px 30px;
+  animation:dotsDrift 48s ease-in-out infinite alternate;
+}
+.glow{position:absolute; border-radius:50%; filter:blur(70px); opacity:.28}
+.glow-a{width:420px; height:420px; left:-120px; top:-120px; background:#0f766e; animation:floatA 30s ease-in-out infinite alternate}
+.glow-b{width:360px; height:360px; right:-100px; top:38%; background:#1d4ed8; animation:floatB 36s ease-in-out infinite alternate}
+.glow-c{width:300px; height:300px; left:55%; bottom:-140px; background:#7c3aed; opacity:.18; animation:floatA 42s ease-in-out infinite alternate-reverse}
+@keyframes gridPan{from{background-position:0 0} to{background-position:52px 104px}}
+@keyframes dotsDrift{from{transform:translate(0,0)} to{transform:translate(-18px,14px)}}
+@keyframes floatA{from{transform:translate(0,0) scale(1)} to{transform:translate(36px,28px) scale(1.08)}}
+@keyframes floatB{from{transform:translate(0,0) scale(1.05)} to{transform:translate(-30px,-24px) scale(1)}}
+@media (prefers-reduced-motion: reduce){
+  .bg-grid,.bg-dots,.glow{animation:none}
+}
+/* ---- Content ---- */
+.wrap{max-width:900px; margin:0 auto; position:relative}
+h1{font-size:clamp(2rem,5vw,2.9rem); line-height:1.15; margin:8px 0 12px; color:#fff; letter-spacing:-.02em}
+h2{color:#fff; border-bottom:2px solid var(--teal); padding-bottom:6px; margin-top:40px; font-size:1.45rem}
+h1 + p, p, li{color:var(--text)}
+a{color:var(--teal-bright); text-decoration-color:rgba(94,234,212,.5)}
+a:hover{color:#fff}
+.badge{display:inline-block; background:rgba(45,212,191,.16); border:1px solid rgba(45,212,191,.45); color:#fff; border-radius:999px; padding:4px 12px; font-size:.9rem}
+.hero-sub{color:var(--muted); font-size:1.05rem}
+.hero-sub strong{color:#fff}
+.tag{display:inline-block; background:rgba(45,212,191,.14); border:1px solid rgba(45,212,191,.35); border-radius:999px; padding:3px 11px; margin:3px; font-size:.9rem; color:#fff}
+.card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; margin:14px 0; backdrop-filter:blur(6px)}
+.card strong{color:#fff}
+.small{color:var(--muted)}
+.media{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:14px 0}
+.media img,.media video{width:100%; border-radius:10px; border:1px solid var(--line); background:#0f172a}
+.media figcaption{font-size:.9rem; color:var(--muted); margin-top:4px}
+ul{padding-left:20px}
+li{margin:4px 0}
+@media (max-width:560px){body{padding:20px 16px 36px}}
 </style>
 </head>
 <body>
+<div class="bg" aria-hidden="true"><div class="bg-grid"></div><div class="bg-dots"></div><div class="glow glow-a"></div><div class="glow glow-b"></div><div class="glow glow-c"></div></div>
+<main class="wrap">
 <h1>Muhammad Tariq Zaman</h1>
-<p><strong>IT Support Executive | CCNA | BSCS</strong><br>
-IT Support, Networks &amp; Microsoft 365 — Islamabad, Pakistan<br>
-Open to Remote &amp; On-site IT Support Roles</p>
+<p class="hero-sub"><strong>IT Support Executive | CCNA | BSCS</strong><br>
+IT Support, Networks &amp; Microsoft 365 — Islamabad, Pakistan</p>
+<p><span class="badge">Open to Remote &amp; On-site IT Support Roles</span></p>
 <p>
 <a href="https://www.linkedin.com/in/muhammad-tariq-zaman/">LinkedIn</a> ·
 <a href="https://github.com/muhammad-tariq-zaman">GitHub</a> ·
@@ -107,5 +162,6 @@ Location: Islamabad, Pakistan<br>
 LinkedIn: <a href="https://www.linkedin.com/in/muhammad-tariq-zaman/">linkedin.com/in/muhammad-tariq-zaman</a><br>
 GitHub: <a href="https://github.com/muhammad-tariq-zaman">github.com/muhammad-tariq-zaman</a></p>
 <p class="small">All facts on this page are taken from the owner's CV and verified profiles. No salary, reference or document detail is published here.</p>
+</main>
 </body>
 </html>
